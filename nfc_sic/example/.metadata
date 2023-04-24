@@ -1,0 +1,5 @@
+version:
+  revision: 8874f21e79d7ec66d0457c7ab338348e31b17f1d
+  channel: stable
+
+project_type: app

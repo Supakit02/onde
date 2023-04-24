@@ -1,0 +1,25 @@
+.pub-cache:
+  variables:
+    FLUTTER_CHANNEL: stable
+    PUB_PATH: ~/flutter/.pub-cache
+
+  before_script:
+    - cd ~
+    - git clone https://github.com/flutter/flutter.git -b ${FLUTTER_CHANNEL} ~/flutter
+    - mkdir -p ~/flutter/.pub-cache
+    - export PATH=$PATH:~/flutter/bin:~/flutter/bin/cache/dart-sdk/bin
+    - cd -
+    - flutter doctor -v
+    - pub global activate coverage
+
+  cache:
+    paths:
+      - ${PUB_PATH}/
+
+include:
+  - local: .gitlab/ci/test.yml
+  - local: .gitlab/ci/analyze.yml
+
+stages:
+  - test
+  - analyze

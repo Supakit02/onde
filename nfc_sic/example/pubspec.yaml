@@ -1,0 +1,34 @@
+name: nfc_sic_example
+description: Demonstrates how to use the nfc_sic plugin.
+publish_to: 'none'
+version: 1.2.0
+# author: Sukawit Charoendet <sukawit.ch@sic.co.th>
+company: Silicon Craft Technology Co., Ltd.
+homepage: http://www.sic.co.th
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+
+  nfc_sic:
+    path: ../
+
+  convert: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_driver:
+    sdk: flutter
+
+  test:
+  integration_test:
+
+flutter:
+  uses-material-design: true

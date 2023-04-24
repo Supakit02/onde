@@ -1,0 +1,68 @@
+include: package:nfc_sic/rules.yaml
+analyzer:
+  exclude:
+    - test/**
+
+linter:
+  rules:
+    # Error Rules
+    # Avoid relative imports for files in lib/.
+    always_use_package_imports: false
+    # Avoid method calls or property accesses on a "dynamic" target.
+    avoid_dynamic_calls: false # (experimental)
+    # Avoid .toString() in production code since results may be minified.
+    avoid_type_to_string: false
+    # Don't put any logic in createState.
+    no_logic_in_create_state: false
+
+    # Style Rules
+    # Specify type annotations.
+    always_specify_types: false
+    # Avoid using as.
+    avoid_as: false # (deprecated)
+    # Avoid catches without on clauses.
+    avoid_catches_without_on_clauses: false
+    # Don't cast a nullable value to a non nullable type.
+    cast_nullable_to_non_nullable: false # (experimental)
+    # Prefer using lowerCamelCase for constant names.
+    constant_identifier_names: false
+    # Missing deprecated annotation.
+    deprecated_consistency: false
+    # Boring as it sometimes force a line of 81 characters to be split in two.
+    # As long as we try to respect that 80 characters limit, going slightly
+    # above is fine.
+    lines_longer_than_80_chars: false
+    # No default cases.
+    no_default_cases: false
+    # Don't use null check on a potentially nullable type parameter.
+    null_check_on_nullable_type_parameter: false # (experimental)
+    # Omit type annotations for local variables.
+    omit_local_variable_types: false
+    # Avoid defining a one-member abstract class when a simple function will do.
+    one_member_abstracts: false
+    # Prefer using a boolean as the assert condition.
+    prefer_bool_in_asserts: false # (deprecated)
+    # Use collection literals when possible.
+    prefer_collection_literals: false
+    # Prefer defining constructors instead of static methods to create instances.
+    prefer_constructors_over_static_methods: false
+    # Prefer double quotes where they won't require escape sequences.
+    prefer_double_quotes: false
+    # Only use double quotes for strings containing single quotes.
+    prefer_single_quotes: false
+    # Document all public members.
+    public_member_api_docs: false
+    # Sort constructor declarations before other members.
+    sort_constructors_first: false
+    # Place the super call last in a constructor initialization list.
+    super_goes_last: false # (deprecated)
+    # Tighten type of initializing formal.
+    tighten_type_of_initializing_formals: false
+    # Don't use final for local variables.
+    unnecessary_final: false
+    # Unnecessary null checks.
+    unnecessary_null_checks: false # (experimental)
+    # Use if-null operators to convert nulls to bools.
+    use_if_null_to_convert_nulls_to_bools: false
+    # Use predefined named constants.
+    use_named_constants: false

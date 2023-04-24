@@ -1,0 +1,14 @@
+gradle-wrapper.jar
+**/*.iml
+**/.gradle
+**/.project
+**/.classpath
+**/.settings/
+/gradlew
+/gradlew.bat
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+**/.DS_Store
+/build/
+/captures/
